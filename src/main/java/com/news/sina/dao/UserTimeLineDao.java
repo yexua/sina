@@ -1,6 +1,6 @@
-package com.cyc.dao;
+package com.news.sina.dao;
 
-import com.cyc.common.RedisPool;
+import com.news.sina.common.RedisPool;
 import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Tuple;

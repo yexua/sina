@@ -1,4 +1,4 @@
-package com.cyc.pojo;
+package com.news.sina.pojo;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
-package com.cyc.dao;
+package com.news.sina.dao;
 
-import com.cyc.pojo.User;
+import com.news.sina.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {

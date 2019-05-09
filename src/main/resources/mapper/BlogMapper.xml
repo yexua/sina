@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cyc.dao.BlogMapper">
-    <resultMap id="BaseResultMap" type="com.cyc.pojo.Blog">
+<mapper namespace="com.news.sina.dao.BlogMapper">
+    <resultMap id="BaseResultMap" type="com.news.sina.pojo.Blog">
         <id column="blogid" jdbcType="INTEGER" property="blogid"/>
         <result column="userid" jdbcType="INTEGER" property="userid"/>
         <result column="publishtime" jdbcType="TIMESTAMP" property="publishtime"/>
     </resultMap>
-    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.cyc.pojo.Blog">
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.news.sina.pojo.Blog">
         <result column="content" jdbcType="LONGVARCHAR" property="content"/>
     </resultMap>
-    <resultMap id="ResultMapWithIds" type="com.cyc.pojo.Blog">
+    <resultMap id="ResultMapWithIds" type="com.news.sina.pojo.Blog">
         <result column="blogid" jdbcType="INTEGER" property="blogid"/>
     </resultMap>
 
@@ -43,13 +43,13 @@
         delete from blog
         where blogid = #{blogid,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.cyc.pojo.Blog"  useGeneratedKeys="true" keyProperty="blogid">
+    <insert id="insert" parameterType="com.news.sina.pojo.Blog"  useGeneratedKeys="true" keyProperty="blogid">
         insert into blog (blogid, userid, publishtime,
                           content)
         values (#{blogid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{publishtime,jdbcType=TIMESTAMP},
                 #{content,jdbcType=LONGVARCHAR})
     </insert>
-    <insert id="insertSelective" parameterType="com.cyc.pojo.Blog">
+    <insert id="insertSelective" parameterType="com.news.sina.pojo.Blog">
         insert into blog
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="blogid != null">
@@ -80,7 +80,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.cyc.pojo.Blog">
+    <update id="updateByPrimaryKeySelective" parameterType="com.news.sina.pojo.Blog">
         update blog
         <set>
             <if test="userid != null">
@@ -95,14 +95,14 @@
         </set>
         where blogid = #{blogid,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.cyc.pojo.Blog">
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.news.sina.pojo.Blog">
         update blog
         set userid      = #{userid,jdbcType=INTEGER},
             publishtime = #{publishtime,jdbcType=TIMESTAMP},
             content     = #{content,jdbcType=LONGVARCHAR}
         where blogid = #{blogid,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.cyc.pojo.Blog">
+    <update id="updateByPrimaryKey" parameterType="com.news.sina.pojo.Blog">
         update blog
         set userid      = #{userid,jdbcType=INTEGER},
             publishtime = #{publishtime,jdbcType=TIMESTAMP}

@@ -1,10 +1,6 @@
-package com.cyc.common;
+package com.news.sina.common;
 
-import com.cyc.util.PropertiesUtil;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
-import redis.clients.jedis.Tuple;
+import com.news.sina.util.PropertiesUtil;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package com.cyc.util;
+package com.news.sina.util;
 
 public class XSSFilter {
     public static String filterBrackets(String s) {

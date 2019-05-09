@@ -1,7 +1,7 @@
-package com.cyc.service;
+package com.news.sina.service;
 
-import com.cyc.pojo.Blog;
-import com.cyc.pojo.BlogDetail;
+import com.news.sina.pojo.Blog;
+import com.news.sina.pojo.BlogDetail;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.cyc.util;
+package com.news.sina.util;
 
-import com.cyc.pojo.User;
+import com.news.sina.pojo.User;
 
 import javax.servlet.http.HttpServletRequest;
 

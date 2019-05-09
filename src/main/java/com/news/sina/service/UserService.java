@@ -1,6 +1,6 @@
-package com.cyc.service;
+package com.news.sina.service;
 
-import com.cyc.pojo.User;
+import com.news.sina.pojo.User;
 
 public interface UserService {
 

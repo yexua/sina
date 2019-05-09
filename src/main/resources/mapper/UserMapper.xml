@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cyc.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="com.cyc.pojo.User">
+<mapper namespace="com.news.sina.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.news.sina.pojo.User">
     <id column="userid" jdbcType="INTEGER" property="userid"/>
     <result column="username" jdbcType="VARCHAR" property="username"/>
     <result column="headpic" jdbcType="INTEGER" property="headpic"/>
@@ -26,13 +26,13 @@
     delete from user
     where userid = #{userid,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.cyc.pojo.User">
+  <insert id="insert" parameterType="com.news.sina.pojo.User">
     insert into user (userid, username, headpic,
                       md5password)
     values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{headpic,jdbcType=INTEGER},
             #{md5password,jdbcType=CHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.cyc.pojo.User">
+  <insert id="insertSelective" parameterType="com.news.sina.pojo.User">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userid != null">
@@ -63,7 +63,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.cyc.pojo.User">
+  <update id="updateByPrimaryKeySelective" parameterType="com.news.sina.pojo.User">
     update user
     <set>
       <if test="username != null">
@@ -78,7 +78,7 @@
     </set>
     where userid = #{userid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.cyc.pojo.User">
+  <update id="updateByPrimaryKey" parameterType="com.news.sina.pojo.User">
     update user
     set username    = #{username,jdbcType=VARCHAR},
       headpic     = #{headpic,jdbcType=INTEGER},

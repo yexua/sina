@@ -1,7 +1,7 @@
-package com.cyc.benchmark;
+package com.news.sina.benchmark;
 
-import com.cyc.pojo.Blog;
-import com.cyc.util.SerializeUtil;
+import com.news.sina.pojo.Blog;
+import com.news.sina.util.SerializeUtil;
 
 import java.io.*;
 import java.util.Date;

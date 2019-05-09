@@ -1,8 +1,8 @@
-package com.cyc.dao;
+package com.news.sina.dao;
 
-import com.cyc.common.RedisPool;
-import com.cyc.pojo.Blog;
-import com.cyc.util.SerializeUtil;
+import com.news.sina.common.RedisPool;
+import com.news.sina.pojo.Blog;
+import com.news.sina.util.SerializeUtil;
 import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 

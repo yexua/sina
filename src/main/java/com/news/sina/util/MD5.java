@@ -1,4 +1,4 @@
-package com.cyc.util;
+package com.news.sina.util;
 
 import org.springframework.util.DigestUtils;
 

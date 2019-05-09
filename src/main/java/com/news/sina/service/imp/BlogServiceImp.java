@@ -1,11 +1,12 @@
-package com.cyc.service.imp;
+package com.news.sina.service.imp;
 
-import com.cyc.dao.*;
-import com.cyc.pojo.Blog;
-import com.cyc.pojo.BlogDetail;
-import com.cyc.pojo.User;
-import com.cyc.service.BlogService;
-import com.cyc.util.DateUtil;
+
+import com.news.sina.dao.*;
+import com.news.sina.pojo.Blog;
+import com.news.sina.pojo.BlogDetail;
+import com.news.sina.pojo.User;
+import com.news.sina.service.BlogService;
+import com.news.sina.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

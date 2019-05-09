@@ -1,4 +1,4 @@
-package com.cyc.util;
+package com.news.sina.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -1,10 +1,10 @@
-package com.cyc.controller;
+package com.news.sina.controller;
 
-import com.cyc.pojo.User;
-import com.cyc.service.UserRelationService;
-import com.cyc.service.imp.BlogServiceImp;
-import com.cyc.service.imp.UserServiceImp;
-import com.cyc.util.SessionUtil;
+import com.news.sina.pojo.User;
+import com.news.sina.service.UserRelationService;
+import com.news.sina.service.imp.BlogServiceImp;
+import com.news.sina.service.imp.UserServiceImp;
+import com.news.sina.util.SessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

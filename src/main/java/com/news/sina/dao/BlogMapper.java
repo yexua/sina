@@ -1,6 +1,6 @@
-package com.cyc.dao;
+package com.news.sina.dao;
 
-import com.cyc.pojo.Blog;
+import com.news.sina.pojo.Blog;
 
 import java.util.List;
 

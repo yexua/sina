@@ -1,9 +1,9 @@
-package com.cyc.service.imp;
+package com.news.sina.service.imp;
 
-import com.cyc.dao.UserMapper;
-import com.cyc.pojo.User;
-import com.cyc.service.UserService;
-import com.cyc.util.MD5;
+import com.news.sina.dao.UserMapper;
+import com.news.sina.pojo.User;
+import com.news.sina.service.UserService;
+import com.news.sina.util.MD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

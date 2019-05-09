@@ -1,6 +1,6 @@
-package com.cyc.util;
+package com.news.sina.util;
 
-import com.cyc.pojo.Blog;
+import com.news.sina.pojo.Blog;
 
 public class SerializeUtil {
 
