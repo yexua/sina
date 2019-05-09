@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <div th:replace="common/head"></div>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <script type="text/javascript" th:src="@{/js/login.js}"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="login-container">
+        <div id="output"></div>
+        <div class="avatar">
+            <img class="headpic cursor-pointer" th:src="@{/pics/2.png}" alt=""
+                 width="70%" style="margin-top: 15px;">
+        </div>
+
+        <!--登录-->
+        <div class="form-box" th:if="${page==0}">
+            <form action="checkLogin.html" method="post">
+                <%--以下两条语句是为了防止浏览器自动填充用户名和密码--%>
+                <input type="text" style="display:none">
+                <input type="password" style="display:none">
+                <input name="userName" type="text" placeholder="username" autocomplete="off">
+                <input name="password" type="password" placeholder="password" autocomplete="off">
+                <button class="btn btn-info btn-block login" type="submit">Login</button>
+                <br>
+                <a href="login.html?page=1">click to register</a>
+            </form>
+        </div>
+        <!--注册-->
+        <div class="form-box" th:if="${page==1}">
+            <form action="checkRegister.html" method="post">
+                <input type="text" style="display:none">
+                <input type="password" style="display:none">
+                <input name="userName" type="text" placeholder="username" autocomplete="off">
+                <input name="password" type="password" placeholder="password">
+                <input name="confirmPassword" type="password" placeholder="confirm" autocomplete="off">
+                <input name="headpic" type="text" value="4" style="display:none">
+                <button class="btn btn-info btn-block login" type="submit">Register</button>
+                <br>
+                <a href="login.html?page=0">click to login</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div th:replace="common/foot"></div>
+</body>
+</html>
+
+
