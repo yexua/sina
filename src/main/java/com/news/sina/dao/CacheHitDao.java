@@ -1,6 +1,8 @@
 package com.news.sina.dao;
 
 import com.news.sina.common.RedisPool;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 
@@ -9,6 +11,10 @@ import redis.clients.jedis.Jedis;
  **/
 @Repository
 public class CacheHitDao {
+
+    @Autowired
+    private RedisTemplate redisTemplate;
+
 
     private static final String CACHE_HIT_KEY = "cache-hit";
     private static final String CACHE_MISS_KEY = "cache-miss";

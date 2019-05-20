@@ -16,10 +16,10 @@
             <div class="panel panel-default">
                 <div class="panel-body" align="center">
 
-                    <img src="@{/pics/${theUser.headpic}"
+                    <img th:src="@{'/pics/' + ${theUser.headpic} + '.png'}"
                          style="width: 150px;height:150px" alt="">
                     <br>
-                    <p style="font-size: 18px"> [[${theUser.username}]] </p>
+                    <p style="font-size: 18px" th:text="${theUser.username}"></p>
                     <a th:if="${user != theUser}" href="follow.html?userId=${theUser.userid}">Follow</a>
                     <br>
                 </div>
@@ -29,13 +29,13 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-4 col-xs-4" align="center">
-                            <a href="user.html?userId=${theUser.userid}&page=0">Blog</a>
+                            <a th:href="'user.html?userId='+${theUser.userid}+'&page=0'">Blog</a>
                         </div>
                         <div class="col-md-4 col-xs-4" align="center">
-                            <a href="user.html?userId=${theUser.userid}&page=1">Followers</a>
+                            <a th:href="'user.html?userId='+${theUser.userid}+'&page=1'">Followers</a>
                         </div>
                         <div class="col-md-4 col-xs-4" align="center">
-                            <a href="user.html?userId=${theUser.userid}&page=2">Followings</a>
+                            <a th:href="'user.html?userId='+${theUser.userid}+'&page=2'">Followings</a>
                         </div>
                     </div>
                 </div>
@@ -43,12 +43,12 @@
 
             <div>
 
-                <div th:if="${page==0}" th:replace="common/blog :: blog"></div>
+                <div th:if="${page==0}" th:replace="common/blog"></div>
 
                 <div th:if="${page == 1 || page == 2}" th:each="f : ${follows}" class="panel panel-default">
                     <div class="panel-body">
                         <div align="center">
-                            <img src="@{/pics/${f.headpic}.png"
+                            <img src="@{/pics/${f.headpic}.png}"
                                  style="width: 80px;height:80px" alt=""><br>
                             <a href="user.html?userId=${f.userid}" style="font-size: 18px">[[${f.username}]]</a>
                         </div>

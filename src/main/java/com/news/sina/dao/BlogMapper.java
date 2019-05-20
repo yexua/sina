@@ -4,8 +4,7 @@ import com.news.sina.pojo.Blog;
 
 import java.util.List;
 
-public interface BlogMapper
-{
+public interface BlogMapper {
     /**
      * 获得所有微博
      * 只取出 blogid

@@ -29,7 +29,8 @@ public class IndexController {
         }
         ModelAndView modelAndView = new ModelAndView("index");
         List<BlogDetail> allBlog = blogServiceImp.getAllBlogOfHome(user.getUserid());
-        modelAndView.addObject("allBlog", allBlog);
+        //List<BlogDetail> allBlog = blogServiceImp.getAllBlogOfHome(user.getUserid());
+        modelAndView.addObject("blogList", allBlog);
         modelAndView.addObject("user", user);
         return modelAndView;
     }

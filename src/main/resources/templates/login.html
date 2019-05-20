@@ -19,7 +19,7 @@
         <!--登录-->
         <div class="form-box" th:if="${page==0}">
             <form action="checkLogin.html" method="post">
-                <%--以下两条语句是为了防止浏览器自动填充用户名和密码--%>
+                <!--以下两条语句是为了防止浏览器自动填充用户名和密码-->
                 <input type="text" style="display:none">
                 <input type="password" style="display:none">
                 <input name="userName" type="text" placeholder="username" autocomplete="off">

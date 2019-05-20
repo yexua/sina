@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface BlogService {
 
+    List<BlogDetail> getAllBlog();
+
     List<BlogDetail> getAllBlogOfHome(int userId);
 
     List<BlogDetail> getAllBlogByUserId(int userId);

@@ -1,25 +1,25 @@
-<div th:fragment="blog" th:each="param : ${blogList}" id="blog-${param.blogid}" class="panel panel-default">
+<div th:each="blog : ${blogList}" th:id="'blog-'+${blog.blogid}" class="panel panel-default">
     <div class="panel-body">
         <div class="media">
             <div class="media-left">
                 <a>
-                    <img src="@{/pics/${param.headpic}}"
+                    <img th:src="@{'/pics/'+ ${blog.headpic}+'.png'}"
                          style="width:100px;height:100px" alt="">
                 </a>
             </div>
             <div class="media-body">
                 <div>
-                    <a th:href="@{/user.html?userId=${param.userid}}" style="font-size: 25px">
-                        [[${param.username}]]
+                    <a th:href="@{'/user.html?userId='+${blog.userid}}" style="font-size: 25px">
+                        [[${blog.username}]]
                     </a>
                 </div>
                 <div class="grey-font">
-                    [[${param.publishtime}]]
-                    <a th:if="${param.isSelf}" id="delete-blog" class="cursor-pointer grey-font"
-                       blogid="${param.blogid}">delete</a>
+                    [[${blog.publishtime}]]
+                    <a th:if="${blog.userid == user.userid}" id="delete-blog" class="cursor-pointer grey-font"
+                       th:attr="blogid=${blog.blogid}">delete</a>
                 </div>
                 <div>
-                    [[${param.content}]]
+                    [[${blog.content}]]
                 </div>
             </div>
         </div>

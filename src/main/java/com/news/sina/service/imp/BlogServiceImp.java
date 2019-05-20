@@ -33,6 +33,11 @@ public class BlogServiceImp implements BlogService {
     private UserRelationDao userRelationDao;
 
     @Override
+    public List<BlogDetail> getAllBlog() {
+        return null;
+    }
+
+    @Override
     public List<BlogDetail> getAllBlogOfHome(int userId) {
 
         Set<Integer> users = userRelationDao.getFollowings(userId);
@@ -56,9 +61,10 @@ public class BlogServiceImp implements BlogService {
 
     private List<BlogDetail> convert(List<Blog> blogIdList) {
         List<BlogDetail> blogDetailList = new ArrayList<>();
+        BlogDetail blogDetail;
         for (Blog blogId : blogIdList) {
             Blog blog = getBlogByBlogId(blogId.getBlogid());
-            BlogDetail blogDetail = new BlogDetail();
+            blogDetail = new BlogDetail();
             blogDetail.setBlogid(blog.getBlogid());
             blogDetail.setContent(blog.getContent());
             blogDetail.setPublishtime(DateUtil.formatDate(blog.getPublishtime()));

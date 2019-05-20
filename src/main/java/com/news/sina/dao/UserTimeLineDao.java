@@ -8,7 +8,6 @@ import redis.clients.jedis.Tuple;
 import java.util.*;
 
 @Repository
-
 public class UserTimeLineDao {
 
     private final static String TIME_LINE_NAMESPACE = "time_lien:";

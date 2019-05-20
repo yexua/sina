@@ -1,6 +1,10 @@
 package com.news.sina.common;
 
 import com.news.sina.util.PropertiesUtil;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.Tuple;
 
 import java.util.Set;
 
@@ -18,8 +22,8 @@ public class RedisPool {
         pool = new JedisPool(config,
                 PropertiesUtil.getProperty("redis.ip"),
                 PropertiesUtil.getIntegerProperty("redis.port", "6379"),
-                PropertiesUtil.getIntegerProperty("redis.timeout"),
-                PropertiesUtil.getProperty("redis.password"));
+                PropertiesUtil.getIntegerProperty("redis.timeout"));
+                //PropertiesUtil.getProperty("redis.password"));
     }
 
 

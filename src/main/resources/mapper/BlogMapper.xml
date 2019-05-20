@@ -43,7 +43,7 @@
         delete from blog
         where blogid = #{blogid,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.news.sina.pojo.Blog"  useGeneratedKeys="true" keyProperty="blogid">
+    <insert id="insert" parameterType="com.news.sina.pojo.Blog" useGeneratedKeys="true" keyProperty="blogid">
         insert into blog (blogid, userid, publishtime,
                           content)
         values (#{blogid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{publishtime,jdbcType=TIMESTAMP},
