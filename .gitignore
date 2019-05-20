@@ -23,5 +23,5 @@ mvnw
 mvnw.cmd
 
 ###
-src\main\resources\application.yml
-src\main\resources\global.properties
+application.yml
+global.properties
