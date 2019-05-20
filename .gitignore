@@ -1,4 +1,3 @@
-HELP.md
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -23,6 +22,6 @@ HELP.md
 mvnw
 mvnw.cmd
 
-##
+###
 application.yml
 global.properties
