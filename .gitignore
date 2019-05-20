@@ -23,7 +23,5 @@ mvnw
 mvnw.cmd
 
 ###
-
-
-application.yml
-global.properties
+src\main\resources\application.yml
+src\main\resources\global.properties
